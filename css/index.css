@@ -1,0 +1,134 @@
+:root {
+    --primary-color: #1E90FF;
+    --secondary-color: #F5F5F5;
+    --primary-text: #333333;
+    --secondary-text: #666666;
+    --background-color: #ffffff;
+}
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body {
+    background-image: url(../Images/nikab2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh; /* Use min-height to accommodate content */
+}
+.nav-bar {
+    display: flex;
+
+}
+.logo a {
+    font-size: 36px;
+    color: var(--secondary-color);
+    margin: 20px;
+    font-weight: bold;
+}
+.logo span {
+    color: var(--primary-color);
+}
+.lists {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+    margin-left: 25%;
+}
+.nav {
+    display: flex;
+    gap: 20px;
+}
+.lists a {
+    color: var(--secondary-color);
+    font-size: 20px;
+    font-weight: bold;
+}
+.my-socialMedia {
+    display: flex;
+    margin-left: 20%;
+}
+.my-socialMedia img {
+    margin-left: 20px;
+}
+#current {
+    color: var(--primary-color);
+}
+.main-sec h1 {
+    font-size: 36px;
+    color: var(--primary-color);
+    text-align: center;
+    justify-content: center;
+    margin-top: 10%;
+}
+.main-sec p {
+    text-align: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-top: 30px;
+    color: var(--secondary-color);
+    font-family: Arial, sans-serif;
+}
+.toggle-btn {
+    background-color: transparent;
+    color: var(--background-color);
+    border: none;
+    margin-left: 50px;
+    font-size: 24px;
+ }
+/* Mobile Portrait (Max Width 480px) */
+@media (max-width: 480px) {
+    .lists, .my-socialMedia, .main-sec p {
+        display: none; /* Only display the h1 */
+    }
+    .main-sec h1 {
+        display: block;
+        margin-top: 40%;
+    }
+}
+
+/* Mobile Landscape (481px to 767px) */
+@media (min-width: 481px) and (max-width: 767px) {
+    .nav li {
+        display: none; /* Hide navigation links */
+    }
+    .main-sec p, .main-sec h1 {
+        display: block; /* Show the h1 and paragraph */
+    }
+}
+
+/* Tablet Portrait (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .nav li {
+        display: none; /* Hide navigation links */
+    }
+    .my-socialMedia{
+        margin-left: 170%;
+    }
+    .toggle-btn{
+        margin-left: 30%;
+    }
+    .main-sec p, .main-sec h1 {
+        display: block; /* Show the h1 and paragraph */
+    }
+}
+
+/* Tablet Landscape (1024px to 1279px) */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .nav li {
+        display: none; /* Hide navigation links */
+    }
+    .main-sec p, .main-sec h1 {
+        display: block; /* Show the h1 and paragraph */
+    }
+}
+/*Destop*/
+@media (min-width: 1280px){
+    .toggle-btn {
+        display: none;
+    }
+}
+

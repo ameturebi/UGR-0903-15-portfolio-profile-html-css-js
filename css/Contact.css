@@ -1,0 +1,228 @@
+:root {
+    --primary-color: #1E90FF;
+    --secondary-color: #F5F5F5;
+    --primary-text: #333333;
+    --secondary-text: #666666;
+    --background-color: #ffffff;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body, html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+header {
+    width: 100%;
+    max-width: 100%;
+    background-color:#4B5563 ;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    flex-wrap: wrap; /* Handle wrapping on smaller screens */
+}
+
+.logo a {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color:#ffffff;
+}
+
+.logo span {
+    color: #007BFF;
+}
+
+.lists {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lists li a {
+    text-decoration: none;
+    color:#ffffff;
+    font-size: 16px;
+}
+
+.lists li a#current {
+    color: #007BFF;
+    font-weight: bold;
+}
+
+.nav-bar > div:nth-child(3) ul {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-bar > div:nth-child(3) ul img {
+    width: 24px;
+    height: 24px;
+}
+
+.toggle-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .nav-bar > div:nth-child(3) {
+    display: none;
+    }
+
+    .toggle-btn {
+    display: block;
+    }
+
+    .lists {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0; /* Prevent overflow */
+    background-color: #f4f4f4;
+    width: 100%; /* Take full width of the header */
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .lists.show {
+    display: flex;
+    }
+}
+section h1 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 24px;
+    margin: 30px;
+}
+.locs h3{
+    padding: 10px;
+}
+
+.locs {
+    padding: 20px;
+    text-align: center;
+    
+}
+form input {
+    background-color: var(--secondary-text);
+    padding-bottom: 20px;
+    margin: 30px;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+}
+input::placeholder {
+    color: var(--background-color);
+    font-weight: bold;
+    text-align: center;
+}
+  button {
+    padding: 5px;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    color: var(--background-color);
+}
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.my-socialMedia   {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin: 20px;
+}
+.toggle-btn {
+    background-color: transparent;
+    color: var(--background-color);
+    border: none;
+    margin-left: 350px;
+    font-size: 24px;
+ }
+/* Mobile Portrait */
+@media (max-width: 480px) {
+    header ul li {
+        display: none; 
+    }
+} 
+/* Mobile Landscape */
+@media (min-width: 481px) and (max-width: 768px){ 
+    header ul  li {
+        display: none; 
+    }
+    .location {
+        display: flex;
+    }
+    form {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two columns with equal width */ 
+        gap: 20px;
+    }
+    }
+      /* Tablet Portrait */
+@media (min-width: 769px) and (max-width: 1024px) {
+    header ul  li {
+        display: none; 
+    }
+    .location {
+        display: flex;
+        gap: 30px;
+    } 
+} 
+/* Tablet Landscape (1024px to 1279px) */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    header ul li{
+        display: none;
+    }
+    .location {
+        display: flex;
+        gap: 130px;
+        width: 100%;
+    }
+    form {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two columns with equal width */ 
+        gap: 20px;
+
+    }
+    }
+    /* Desktop (Min Width 1280px) */
+@media (min-width: 1280px) {
+    .location {
+        display: flex;
+        gap: 200px;
+        width: 100%;
+    } 
+    .toggle-btn {
+        display: none;
+    }
+}
+
